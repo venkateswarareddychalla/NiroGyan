@@ -14,7 +14,7 @@ const Appointments = () => {
   const fetchAppointments = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/api/appointments');
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/appointments`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch appointments');
