@@ -6,7 +6,7 @@ const sqlite3 = require("sqlite3");
 
 const app = express();
 const corsOptions = {
-  origin: ['https://your-frontend.vercel.app'], // replace with your Vercel URL
+  origin: ['https://niro-gyan.vercel.app'], // replace with your Vercel URL
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
