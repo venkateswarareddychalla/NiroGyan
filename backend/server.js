@@ -5,12 +5,7 @@ const { open } = require("sqlite");
 const sqlite3 = require("sqlite3");
 
 const app = express();
-const corsOptions = {
-  origin: ['https://niro-gyan.vercel.app'], // replace with your Vercel URL
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 const dbPath = path.join(__dirname, "database.db");
@@ -660,4 +655,3 @@ app.get('/api/health', (req, res) => {
 });
 
 initializeDBAndServer();
-// Port cleaned
