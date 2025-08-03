@@ -5,7 +5,13 @@ const { open } = require("sqlite");
 const sqlite3 = require("sqlite3");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://your-vercel-app.vercel.app', // TODO: Replace with your actual Vercel domain
+    'http://localhost:5173'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 const dbPath = path.join(__dirname, "database.db");
