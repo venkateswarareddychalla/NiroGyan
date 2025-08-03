@@ -5,13 +5,12 @@ const { open } = require("sqlite");
 const sqlite3 = require("sqlite3");
 
 const app = express();
-app.use(cors({
-  origin: [
-    'https://niro-gyan.vercel.app',
-    'http://localhost:5173'
-  ],
-  credentials: true
-}));
+const corsOptions = {
+  origin: ['https://your-frontend.vercel.app'], // replace with your Vercel URL
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const dbPath = path.join(__dirname, "database.db");
