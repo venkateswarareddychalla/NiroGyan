@@ -1,0 +1,20 @@
+{
+  "name": "niroggyan-healthcare-app",
+  "version": "1.0.0",
+  "description": "Healthcare Appointment Booking System",
+  "scripts": {
+    "start": "npm run start:all",
+    "start:all": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "npm run start:all"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
