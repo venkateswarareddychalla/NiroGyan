@@ -7,7 +7,7 @@ const sqlite3 = require("sqlite3");
 const app = express();
 app.use(cors({
   origin: [
-    'https://your-vercel-app.vercel.app', // TODO: Replace with your actual Vercel domain
+    'https://niro-gyan.vercel.app',
     'http://localhost:5173'
   ],
   credentials: true
